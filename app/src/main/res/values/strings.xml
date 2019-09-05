@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">Search Me</string>
+    <string name="title_activity_maps">Search Me</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="unknown_error_occured">Unknown Error Occured</string>
+    <string name="term">
+01.User must pay BDT 999 Taka to register this app. \n\n
+
+02.	User will pay only one time  except the user called rider, no monthly or yearly charge will be applied.\n\n
+
+03.	User must pay their registration fee by the payment gateway of SSLCOMMERZ.\n\n
+
+04.	This app is secured by device mac address, when user changes his/her device he/she has to contacts with us.\n\n
+
+05.	Device API level must be between 14 to 29.\n\n
+
+06.	App works on android system.\n\n
+
+07.	Don’t abuse of this app, in case of abusing user’s accounts may be banned.\n\n
+
+08.	Admin preserve the right to terminate user’s accounts at any time.\n\n
+
+
+    </string>
+
+    <string name="about">
+<b>International Apps Development Company launches its first app named Search Me which providing the following services:</b>
+\n\n
+
+01.	User can create their profile.\n\n
+02.	They can search by using multi fields.\n\n
+03.	They can also customize their search field.\n\n
+04.	Possible to create multiple search view.\n\n
+05.	User to user messaging by app.\n\n
+06.	User to admin  messaging support email.\n\n
+07.	List view search result with live distance.\n\n
+08.	Map view search result with live location.\n\n
+09.	Calling by opening phone dial pad.\n\n
+10.	Viewing profile of other user.\n\n
+11.	Making phone book of your office.\n\n
+12.	Store data and search your organization.\n\n
+<b>We provide training related to apps and android apps solution and support</b>
+        \n\n
+    </string>
+
+    <string name="privacy">
+        <b>Refund and Return Policy</b>\n\n
+01.	We provide refund and return policy for our users.\n\n
+02.	If user buys this app and the user are not happy with it for any reason, user can refund / return their paid amount by maintaining our refund and return policy.\n\n
+03.	The user must have to email us within 24 hours with reason why you aren’t happy with this app. Showing the reason of the user will be highly appreciated to us. In future we will try to satisfy user’s demand having taken into account the reason.\n\n
+04.	The user must have to provide a payment media at the time of sending email by which user can refund / return their amount.\n\n
+05.	Sender email must be the registered email of search me app.\n\n
+
+
+\n\n
+        <b>Privacy Policy</b>
+
+\n\n
+01.	We regard user data as a very personal document.\n\n
+02.	Your data is searchable to other users.\n\n
+03.	You may block any user not to search your data from search me app.\n\n
+04.	You may remove and edit your created profile from app.\n\n
+05.	If any user is found to be breaching our terms and conditions, then we will immediately terminate their use of our services.\n\n
+
+
+    </string>
+    <string-array name="gender">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+
+    </string-array>
+
+    <string-array name="bloodGroup">
+        <item>Select Blood Group</item>
+        <item>A+</item>
+        <item>B+</item>
+        <item>O+</item>
+        <item>AB+</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>0-</item>
+        <item>AB-</item>
+
+    </string-array>
+
+    <string-array name="donateBlood">
+        <item>Select Donar</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="maritalStatus">
+        <item>Select Married?</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="maritalOffer">
+        <item>Select MaritalOffer</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+    <string-array name="mode">
+        <item>Select Mode</item>
+        <item>Sales</item>
+        <item>Buys</item>
+
+    </string-array>
+
+    <string-array name="coworkingmode">
+        <item>Select Co-Working Mode</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="ridermode">
+        <item>Select Rider Mode</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="journeymode">
+        <item>Select Journey Mode</item>
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+</resources>

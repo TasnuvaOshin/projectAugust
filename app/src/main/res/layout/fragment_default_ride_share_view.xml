@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ViewCustomizeSearch.defaultRideShareView">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            android:id="@+id/top_card"
+            android:elevation="6dp"
+
+
+            >
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:src="@drawable/back"
+                android:id="@+id/back_to_home"
+                android:paddingTop="12dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="8dp"
+                android:background="@android:color/transparent"
+                android:paddingLeft="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ride Sharing Services"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="#0044d6"
+            android:layout_margin="15dp"
+            android:id="@+id/card"
+            android:layout_below="@+id/top_card"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Rider Mode"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card"
+            android:gravity="center_horizontal"
+            android:id="@+id/mode_layout"
+
+            >
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/mode_yes"
+
+                android:padding="6dp"
+               />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/mode_no"
+                android:padding="6dp"
+
+
+                />
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="#0044d6"
+            android:layout_margin="15dp"
+            android:id="@+id/card2"
+            android:layout_below="@id/mode_layout"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Journey Mode"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card2"
+            android:gravity="center_horizontal"
+            android:id="@+id/mode_layout2"
+
+            >
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:id="@+id/journey_yes"
+
+                android:padding="6dp"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:id="@+id/journey_no"
+                android:padding="6dp"
+
+
+                />
+
+        </LinearLayout>
+
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mode_layout2"
+            android:layout_margin="15dp"
+            android:id="@+id/vehicle_name"
+            android:hint="Enter Vehicle Name"
+            android:layout_marginBottom="15dp"
+            android:textColor="@android:color/black"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vehicle_name"
+            android:layout_margin="15dp"
+            android:id="@+id/destination"
+            android:hint="Destination"
+            android:layout_marginBottom="15dp"
+            android:textColor="@android:color/black"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:padding="12dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="16sp"
+
+            android:layout_margin="15dp"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+
+            android:layout_below="@id/destination"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+
+</ScrollView>

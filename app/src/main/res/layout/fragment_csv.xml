@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CustomizeSearchView.csv">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        android:id="@+id/top_card"
+        android:elevation="6dp"
+
+
+
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:src="@drawable/back"
+            android:id="@+id/back_to_home"
+            android:paddingTop="12dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="8dp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customize Search View"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            />
+    </androidx.cardview.widget.CardView>
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/top_card"
+       android:background="@color/colorPrimaryDark"
+
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_margin="20dp"
+           android:background="@android:color/white"
+
+
+           >
+
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textStyle="bold"
+               android:textSize="16sp"
+               android:textColor="@color/colorPrimaryDark"
+               android:padding="16sp"
+               android:hint="Enter the Title"
+               android:inputType="text"
+               android:maxLength="50"
+               android:layout_marginBottom="15dp"
+               android:id="@+id/title"
+
+               />
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/name"
+               />
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Key Word"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/key_word"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Father name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/father_name"
+               />
+
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Mother name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/mother_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Date Of Birth"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/date_of_birth"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Gender"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/gender"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Nationality"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/nationality"
+               />
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Religion"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/religion"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Blood Group"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/blood_group"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Donate Blood"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/donate_blood"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Marital Status"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/marital_status"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Marital Offer"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/marital_offer"
+               />
+
+
+
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Profession"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/profession"
+               />
+
+
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Mobile"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/mobile"
+               />
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Telephone"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/telephone"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Email"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/email"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Fax"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/fax"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Social Network Id"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/social_network_id"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Present Address"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/present_address"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Country Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/country_name"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="School Institute Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/school_institute_name"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="School Institute Short Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/school_institute_short_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="School Exam Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/school_exam_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="School Subject"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/school_subject"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="School Class"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/school_class"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="School Roll Id No"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/school_roll_id_no"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="School Passing Year"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/school_passing_year"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="College Institute Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/college_institute_name"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="College Institute Short Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/college_institute_short_name"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="College Exam Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/college_exam_name"
+               />
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="College Subject"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/college_subject"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="College Roll Id No"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/college_roll_id_no"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="College Passing Year"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/college_passing_year"
+               />
+
+
+
+
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="University  Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/uni_institute_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="University Short Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/uni_institute_short_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="University Program Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/uni_program_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="University Subject"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/uni_subject"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="University Id No"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/uni_id_no"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="University Passing Year"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/uni_passing_year"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="More Institute Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/more_institute_name"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="More Institute Short Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/more_institute_short_name"
+               />
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="More Program Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/more_program_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="More Department Subject"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/more_department_subject"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="More Id No"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/more_id_no"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="More Passing Year"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/more_passing_year"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sales Mode"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/mode"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sales Product Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/sales_product_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sales Details"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/sales_details"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Professional Organization"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/professional_organization"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Posted Office Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/posted_office_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Designation"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/designation"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Professional Department"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/professional_department"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Specialized On"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/specialized_on"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Years Of Experience"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/year_of_experience"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Professional Address"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/professional_address"
+               />
+           <CheckBox
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Business Organization Name"
+           android:textSize="16sp"
+           android:padding="6dp"
+               android:id="@+id/business_organization_name"
+           />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Training"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/training"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Services"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/services"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Business Address"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/business_address"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Co Working Mode"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/co_working_mode"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Partner Subject"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/partner_subject"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Area"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/area"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Remarks"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/remarks"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Looking For"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/looking_for"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Use Myself As"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/use_myself_as"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Rider Mode"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/rider_mode"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Vehicle Name"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/vehicle_name"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Model"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/model"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Registration No"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/registration_no"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Capacity"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/capacity"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Rate Per Hour "
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/rate_per_hr_km_day"
+               />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Journey Mode"
+               android:textSize="16sp"
+               android:padding="6dp"
+               android:id="@+id/journey_mode"
+               />
+           <CheckBox
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Journey Destination"
+           android:textSize="16sp"
+           android:padding="6dp"
+               android:id="@+id/journey_destination"
+           />
+
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="12dp"
+               android:layout_margin="35dp"
+               android:background="#0044d6"
+               style="@style/Widget.MaterialComponents.Button"
+               android:text="Save"
+               android:id="@+id/save"
+               android:textColor="@android:color/white"
+               android:textStyle="bold"
+               android:textSize="18sp"
+
+
+               />
+       </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>
