@@ -55,7 +55,7 @@
             android:layout_height="540dp"
             android:layout_gravity="fill_vertical"
             android:layout_margin="12dp"
-            android:background="#ddffffff"
+
             android:fillViewport="true"
 
             android:paddingStart="6dp"

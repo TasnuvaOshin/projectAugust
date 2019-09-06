@@ -15,6 +15,17 @@ import com.sslwireless.sslcommerzlibrary.model.util.SdkType;
 import com.sslwireless.sslcommerzlibrary.view.singleton.IntegrateSSLCommerz;
 import com.sslwireless.sslcommerzlibrary.viewmodel.listener.TransactionResponseListener;
 
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 public class TestActivity extends AppCompatActivity implements TransactionResponseListener {
 private Context context;
     @Override

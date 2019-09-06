@@ -1,5 +1,6 @@
 package apps.searchme.sm.ChatMessage;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -46,6 +48,17 @@ import apps.searchme.sm.Util.DeviceClass;
 import apps.searchme.sm.profile_mode;
 
 import static android.content.Context.MODE_PRIVATE;
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 
 public class ChatFragment extends Fragment {
     private RecyclerView recyclerView;
@@ -69,6 +82,9 @@ back = view.findViewById(R.id.back_to_home);
 back.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+//Hide:
+        imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
         SetFragment(new HomeFragment());
     }
 });

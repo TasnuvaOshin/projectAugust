@@ -1,5 +1,6 @@
 package apps.searchme.sm.CustomizeSearchView;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -35,7 +37,17 @@ import apps.searchme.sm.Home.HomeFragment;
 import apps.searchme.sm.R;
 import apps.searchme.sm.Util.DeviceClass;
 
-
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 public class csv extends Fragment {
     private CheckBox date_of_birth, gender, blood_group, donate_blood, marital_status, marital_offer, mode, co_working_mode, rider_mode, journey_mode, user_name, key_word, father_name, mother_name, name, nationality, religion, profession, telephone, email, fax, mobile, social_network_id, present_address, country_name, school_institute_name, school_institute_short_name, school_exam_name, school_subject, school_class, school_roll_id_no, school_passing_year, college_institute_name, college_institute_short_name, college_exam_name, college_subject, college_roll_id_no, college_passing_year, uni_institute_name, uni_institute_short_name, uni_program_name, uni_subject, uni_id_no, uni_passing_year, more_institute_name, more_institute_short_name, more_program_name, more_department_subject, more_id_no, more_passing_year, sales_product_name, sales_details, professional_organization, posted_office_name, designation, professional_department, specialized_on, year_of_experience, professional_address, business_organization_name, training, services, business_address, partner_subject, area, remarks, looking_for, use_myself_as, vehicle_name, model, registration_no, capacity, rate_per_hr_km_day, journey_destination, yourself;
     private String value;
@@ -174,6 +186,9 @@ public class csv extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+//Hide:
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.frame_layout, new HomeFragment());
                 fragmentTransaction.addToBackStack("my_fragment").commit();

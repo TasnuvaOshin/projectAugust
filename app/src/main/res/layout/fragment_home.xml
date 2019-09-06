@@ -5,8 +5,11 @@
     android:id="@+id/drawaer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7c10046"
-    tools:context=".Home.HomeFragment">
+    android:background="#f7d2004c"
+    tools:context=".Home.HomeFragment"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -80,8 +83,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:padding="6dp"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="12dp"
                     app:cardElevation="8dp"
+                    android:layout_marginBottom="6dp"
 
                     >
 
@@ -115,8 +119,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:padding="6dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    android:layout_marginBottom="6dp"
 
                     >
 
@@ -160,8 +165,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:padding="6dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    android:layout_marginBottom="6dp"
 
                     >
 
@@ -195,9 +201,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:padding="6dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="6dp"
-
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    android:layout_marginBottom="6dp"
                     >
 
                     <ImageView
@@ -238,8 +244,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:padding="6dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    android:layout_marginBottom="6dp"
 
                     >
 
@@ -272,9 +279,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:padding="6dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="6dp"
-
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    android:layout_marginBottom="6dp"
                     >
 
                     <ImageView

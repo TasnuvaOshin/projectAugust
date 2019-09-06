@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -40,8 +41,21 @@ import apps.searchme.sm.Home.HomeFragment;
 import apps.searchme.sm.MainActivity;
 import apps.searchme.sm.Payment.PaymentFragment;
 import apps.searchme.sm.R;
+import apps.searchme.sm.ShowResultUserProfile.ProfileActivity;
 import apps.searchme.sm.Util.DeviceClass;
 
+import static android.content.Context.MODE_PRIVATE;
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 
 public class LoginFragment extends Fragment {
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
@@ -107,7 +121,6 @@ public class LoginFragment extends Fragment {
                     firebaseAuth.getCurrentUser().reload();
                     if (!firebaseAuth.getCurrentUser().isEmailVerified()) {
                         firebaseAuth.getCurrentUser().sendEmailVerification();
-
                         Toast.makeText(getActivity(), "Email Sent!", Toast.LENGTH_LONG).show();
                     } else {
                         Toast.makeText(getActivity(), "Your email has been verified! You can login now.", Toast.LENGTH_LONG).show();
@@ -133,9 +146,10 @@ public class LoginFragment extends Fragment {
                         String user_name = et_user_name.getText().toString().trim();
                         String url = "http://search-me.xyz/searchme/login.php?email_address=" + user_name + "&mac_address=" + mac_address;
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                        if (user != null) {
-                            if (user.isEmailVerified()) {
 
+                        if (user != null) {
+                            firebaseAuth.getCurrentUser().reload();
+                            if (user.isEmailVerified()) {
 
                                 InsertDb insertDb = new InsertDb();
                                 insertDb.execute(url);
@@ -287,6 +301,7 @@ public class LoginFragment extends Fragment {
                 if (code.equals("201")) {
                     progressDialog.dismiss();
                     SetFragment(homeFragment);
+
                 } else {
 
                     return value;
@@ -314,6 +329,17 @@ public class LoginFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        SharedPreferences myPrefs = getActivity().getSharedPreferences("myPrefs", MODE_PRIVATE);
+        String online = myPrefs.getString("online", "");
+        if (online.equals("yes")) {
+            SetFragment(new HomeFragment());
+        }
+
+    }
 
     public class ChangeMac extends AsyncTask<String, String, String> {
 

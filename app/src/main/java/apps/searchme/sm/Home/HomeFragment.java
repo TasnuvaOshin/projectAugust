@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.AsyncTask;
@@ -65,9 +66,21 @@ import apps.searchme.sm.ViewCustomizeSearch.viewCustomize;
 import apps.searchme.sm.R;
 import apps.searchme.sm.Util.DeviceClass;
 
+import static android.content.Context.MODE_PRIVATE;
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 public class HomeFragment extends Fragment {
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
-    private CardView CompleteProfile, MultiSearch, CreateCustomize, CustomizeSearchView, msg,support;
+    private CardView CompleteProfile, MultiSearch, CreateCustomize, CustomizeSearchView, msg, support;
     private ProfileInitFragment profileInitFragment;
     private MultiSearchFragment multiSearchFragment;
     private FusedLocationProviderClient fusedLocationProviderClient;
@@ -172,6 +185,10 @@ public class HomeFragment extends Fragment {
                 switch (menuItem.getItemId()) {
 
                     case R.id.logout:
+                        SharedPreferences myPrefs = getActivity().getSharedPreferences("myPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = myPrefs.edit();
+                        editor.putString("online", "no");
+                        editor.commit();
                         SetFragment(new LoginFragment());
                         return true;
 
@@ -179,7 +196,7 @@ public class HomeFragment extends Fragment {
                         ShareTheApp();
                         return true;
 
-                    case  R.id.support:
+                    case R.id.support:
                         SetFragment(new SupportFragment());
                         return true;
                 }
@@ -189,7 +206,18 @@ public class HomeFragment extends Fragment {
             }
         });
 
-hideKey();
+        hideKey();
+
+
+
+
+        SharedPreferences myPrefs = getActivity().getSharedPreferences("myPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = myPrefs.edit();
+        editor.putString("online", "yes");
+        editor.commit();
+
+
+
         return view;
     }
 

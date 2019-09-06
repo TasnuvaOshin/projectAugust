@@ -138,7 +138,7 @@
                 android:layout_weight="0.8"
                 android:background="@color/colorPrimaryDark"
                 android:gravity="center"
-                android:text="Personal Information"
+                android:text="PERSONAL INFORMATION"
                 android:textColor="@android:color/white"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -541,7 +541,7 @@
                 android:layout_weight="0.8"
                 android:background="@color/colorPrimaryDark"
                 android:gravity="center"
-                android:text="Contact INFORMATION"
+                android:text="CONTACT INFORMATION"
                 android:textColor="@android:color/white"
                 android:textSize="18dp"
                 android:textStyle="bold" />
@@ -703,7 +703,7 @@
                 android:layout_weight="0.8"
                 android:background="@color/colorPrimaryDark"
                 android:gravity="center"
-                android:text="Educational INFORMATION"
+                android:text="EDUCATIONAL INFORMATION"
                 android:textColor="@android:color/white"
                 android:textSize="18dp"
                 android:textStyle="bold" />

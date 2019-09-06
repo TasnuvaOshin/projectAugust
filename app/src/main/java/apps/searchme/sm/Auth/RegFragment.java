@@ -56,7 +56,17 @@ import apps.searchme.sm.MainActivity;
 import apps.searchme.sm.R;
 import apps.searchme.sm.Util.DeviceClass;
 
-
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 public class RegFragment extends Fragment {
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
@@ -119,23 +129,11 @@ public class RegFragment extends Fragment {
                                         @Override
                                         public void onComplete(@NonNull Task<AuthResult> task) {
 
+                                            checkStatus();
+                                            InsertDb insertDb = new InsertDb();
+                                            insertDb.execute();
                                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                                            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()) {
-
-
-                                                        checkStatus();
-                                                        InsertDb insertDb = new InsertDb();
-                                                        insertDb.execute();
-
-                                                    } else {
-                                                        //not working
-                                                        progressDialog.dismiss();
-                                                    }
-                                                }
-                                            });
+                                            user.sendEmailVerification();
                                         }
                                     });
 

@@ -24,12 +24,21 @@ import com.sslwireless.sslcommerzlibrary.viewmodel.listener.TransactionResponseL
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import apps.searchme.sm.Auth.LoginFragment;
-import apps.searchme.sm.Auth.RegFragment;
+import apps.searchme.sm.MainActivity;
 import apps.searchme.sm.R;
 import apps.searchme.sm.Transaction.BackToRegActivity;
-import apps.searchme.sm.Transaction.TransactionActivity;
 
-
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 public class PaymentFragment extends Fragment implements TransactionResponseListener {
     private ImageButton back;
     private TabHost tabHost;
@@ -143,7 +152,9 @@ public class PaymentFragment extends Fragment implements TransactionResponseList
     @Override
     public void transactionSuccess(TransactionInfoModel transactionInfoModel) {
         Toast.makeText(getActivity(), "Successfully Paid! ", Toast.LENGTH_SHORT).show();
-      SetFragment(new LoginFragment());
+        getActivity().overridePendingTransition(0, 0);
+        startActivity(new Intent(getActivity(), BackToRegActivity.class));
+
 
     }
 
@@ -152,7 +163,9 @@ public class PaymentFragment extends Fragment implements TransactionResponseList
         Toast.makeText(getActivity(), "Transaction Failed !!!", Toast.LENGTH_SHORT).show();
         // SetFragment(new RegFragment());
         //need to add activity
-        SetFragment(new LoginFragment());
+        getActivity().overridePendingTransition(0, 0);
+        startActivity(new Intent(getActivity(), MainActivity.class));
+
 
     }
 

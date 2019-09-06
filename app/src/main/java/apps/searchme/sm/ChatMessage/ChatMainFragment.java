@@ -29,10 +29,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import apps.searchme.sm.R;
 import apps.searchme.sm.Recyclerview.ChatMsgViewHolder;
 import apps.searchme.sm.Recyclerview.ChatViewClass;
+import apps.searchme.sm.Util.DeviceClass;
 
 import static android.content.Context.MODE_PRIVATE;
 
-
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 public class ChatMainFragment extends Fragment {
     private TextInputEditText textInputEditText;
     private ImageButton send;
@@ -55,14 +66,12 @@ public class ChatMainFragment extends Fragment {
         databaseReference = FirebaseDatabase.getInstance().getReference().child("message").child(name);
 
 
-
-
         send = view.findViewById(R.id.send);
         textInputEditText = view.findViewById(R.id.write);
         back = view.findViewById(R.id.back_to_home);
 
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager((AppCompatActivity)getActivity());
+        layoutManager = new LinearLayoutManager((AppCompatActivity) getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -78,13 +87,14 @@ public class ChatMainFragment extends Fragment {
             public void onClick(View view) {
 
                 SharedPreferences myPrefs = (SharedPreferences) getActivity().getSharedPreferences("myPrefs", MODE_PRIVATE);
-               // String myemail = myPrefs.getString("MEM1", "");
+                // String myemail = myPrefs.getString("MEM1", "");
                 String myname = myPrefs.getString("MEM2", "");
                 String text = textInputEditText.getText().toString();
                 Log.d("email", myname);
                 HashMap<String, String> hashMap = new HashMap<>();
                 hashMap.put("name", myname);
                 hashMap.put("msg", text);
+                hashMap.put("date", DeviceClass.GetTime());
                 databaseReference.push().setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -107,8 +117,7 @@ public class ChatMainFragment extends Fragment {
             protected void onBindViewHolder(@NonNull ChatMsgViewHolder chatMsgViewHolder, int i, @NonNull ChatViewClass chatViewClass) {
                 chatMsgViewHolder.msg.setText(chatViewClass.getMsg());
                 chatMsgViewHolder.user.setText(chatViewClass.getName());
-
-
+                chatMsgViewHolder.date.setText(chatViewClass.getDate());
             }
 
             @NonNull

@@ -370,6 +370,7 @@ public class ProfileActivity extends AppCompatActivity {
                     HashMap<String, String> hashMap = new HashMap<>();
                     hashMap.put("msg", "Welcome To Chat");
                     hashMap.put("name", "Write Your Message");
+                    hashMap.put("date",DeviceClass.GetTime());
                     databaseReference.child(String.valueOf(roomno)).push().setValue(hashMap);
                     return value;
 

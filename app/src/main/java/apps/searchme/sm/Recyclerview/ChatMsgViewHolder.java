@@ -10,12 +10,14 @@ import apps.searchme.sm.R;
 
 public class ChatMsgViewHolder extends RecyclerView.ViewHolder {
 
-   public TextView msg, user;
+   public TextView msg, user,date;
+
 
 
     public ChatMsgViewHolder(@NonNull View itemView) {
         super(itemView);
         msg = itemView.findViewById(R.id.msg);
         user = itemView.findViewById(R.id.user);
+        date = itemView.findViewById(R.id.date);
     }
 }

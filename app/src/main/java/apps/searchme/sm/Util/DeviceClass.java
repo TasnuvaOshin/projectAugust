@@ -1,13 +1,15 @@
 package apps.searchme.sm.Util;
 
 import android.text.TextUtils;
+import android.text.format.Time;
 import android.util.Patterns;
 
 import java.net.NetworkInterface;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
-public class  DeviceClass {
+public class DeviceClass {
 
     public static String getMacAddress() {
         try {
@@ -38,10 +40,16 @@ public class  DeviceClass {
     }
 
 
-
     //for email validation
 
     public static boolean isValidEmail(CharSequence target) {
         return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
+    }
+
+
+    public static String GetTime() {
+
+        String mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
+        return mydate;
     }
 }

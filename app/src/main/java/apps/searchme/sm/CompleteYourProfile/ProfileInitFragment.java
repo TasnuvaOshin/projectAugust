@@ -2,6 +2,7 @@ package apps.searchme.sm.CompleteYourProfile;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -16,6 +17,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -68,7 +70,17 @@ import apps.searchme.sm.Util.DeviceClass;
 import static android.content.Context.MODE_PRIVATE;
 import static android.content.Context.MODE_WORLD_READABLE;
 
-
+/*
+Search Me Project Builder
+Company : Joy Technologies Ltd
+Project Author : Tasnuva Tabassum Oshin,Sr Software Enginner at Joy Technologies Ltd
+Team : Joy It Team
+http://joy-technologies-ltd.com/
+Copyright@2019-tasnuva
+Phone : 01401144309
+For your Kind Information This Project is Made By Joy Technologies Ltd.
+Thanks.
+*/
 public class ProfileInitFragment extends Fragment {
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
     private static final int SELECT_PICTURES = 11;
@@ -351,13 +363,14 @@ public class ProfileInitFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 progressDialog.show();
+                save = true;
                 SimulateAllEditText();
                 checkStatus();
 
                 if (save) {
 
-                    SimulateAllEditText();
-                    checkStatus();
+                    //SimulateAllEditText();
+                    //checkStatus();
                     InsertDb insertDb = new InsertDb();
                     insertDb.execute();
                     GeneratePDF();
@@ -377,6 +390,11 @@ public class ProfileInitFragment extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
+//Hide:
+                imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
+
                 SetFragment(new HomeFragment());
             }
         });
@@ -523,13 +541,7 @@ public class ProfileInitFragment extends Fragment {
                 mother_name.setError("Please Enter The Mothers Name");
                 save = false;
                 progressDialog.dismiss();
-            } else if (editText.getId() == date_of_birth.getId()) {
-
-                date_of_birth.requestFocus();
-                date_of_birth.setError("Please Enter the Date of Birht");
-                save = false;
-                progressDialog.dismiss();
-            } else if (editText.getId() == mobile.getId()) {
+            }  else if (editText.getId() == mobile.getId()) {
 
                 mobile.requestFocus();
                 mobile.setError("Please Select the  Mobile Number");
@@ -562,7 +574,10 @@ public class ProfileInitFragment extends Fragment {
             }
 
 
-        } else {
+        }
+
+        else {
+
             String column_name = getResources().getResourceEntryName(editText.getId());
             String column_value = column_name + "=" + editText.getText().toString();
             columnValue.add(column_value);
